@@ -1,0 +1,248 @@
+/**
+ * DHRUVANSH AQUA LLP — BASE STYLES & RESET
+ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-height) + var(--topbar-height) + 16px);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  background-color: var(--color-canvas);
+  color: var(--color-ink);
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: 1.6;
+  font-weight: 400;
+  background-color: var(--color-canvas);
+  color: var(--color-ink);
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Accessibility Skip Link */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  background: var(--color-ink);
+  color: #FFFFFF;
+  padding: 0.75rem 1.25rem;
+  z-index: 99999;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: var(--radius-xs);
+  transition: top var(--transition-fast);
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* Global Focus Styles */
+:focus-visible {
+  outline: 2px solid var(--color-mineral);
+  outline-offset: 3px;
+}
+
+/* Typography Hierarchy */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-ink);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: clamp(1.75rem, 3.2vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: clamp(1.25rem, 2vw, 1.6rem);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+h4 {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+p {
+  color: var(--color-ink-muted);
+  font-size: var(--text-base);
+  line-height: 1.65;
+}
+
+p.lead {
+  font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+  line-height: 1.6;
+  color: var(--color-ink);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+input, textarea, select {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* Layout Utilities */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-pad);
+  padding-right: var(--container-pad);
+}
+
+.container-wide {
+  width: 100%;
+  max-width: var(--container-wide);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-pad);
+  padding-right: var(--container-pad);
+}
+
+.section-padding {
+  padding-top: clamp(3.5rem, 6vw, 6.5rem);
+  padding-bottom: clamp(3.5rem, 6vw, 6.5rem);
+}
+
+.section-header {
+  margin-bottom: clamp(2.5rem, 4vw, 4rem);
+}
+
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-mineral);
+  margin-bottom: 0.75rem;
+}
+
+.section-tag::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: var(--color-mineral);
+  border-radius: 1px;
+}
+
+.section-title {
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  max-width: 680px;
+  font-size: var(--text-md);
+  color: var(--color-ink-muted);
+}
+
+/* Technical Badges & Eyebrows */
+.tech-badge {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0.6rem;
+  background: var(--color-surface-subtle);
+  color: var(--color-ink);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xs);
+}
+
+.tech-badge.accent {
+  background: var(--color-mineral-soft);
+  color: var(--color-mineral-dark);
+  border-color: var(--color-mineral-light);
+}
+
+.tech-badge.amber {
+  background: var(--color-accent-amber-subtle);
+  color: var(--color-accent-amber);
+  border-color: #E2CFB4;
+}
+
+/* Screen Reader Only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,194 @@
+/**
+ * DHRUVANSH AQUA LLP — RESPONSIVE DESIGN & PRINT MEDIA
+ */
+
+/* Medium Screens & Tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .hero-media-wrapper {
+    max-width: 720px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .overview-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .product-card-row,
+  .product-card-row.reversed {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card-row.reversed .product-media-column {
+    order: 0;
+  }
+
+  .product-media-column img {
+    min-height: 280px;
+    max-height: 360px;
+  }
+
+  .workflow-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .quality-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .commercial-steps-rail {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .enquiry-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .footer-top-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+/* Small Screens & Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  :root {
+    --header-height: 64px;
+    --container-pad: 1rem;
+  }
+
+  .top-bar-items {
+    display: none;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  .header-actions .btn-sm {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  .hero-rail {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-rail-item {
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+    padding: 1.25rem 1rem;
+  }
+
+  .hero-rail-item:last-child {
+    border-bottom: none;
+  }
+
+  .workflow-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .specs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .streams-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .commercial-steps-rail {
+    grid-template-columns: 1fr;
+  }
+
+  .compliance-box {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem;
+    gap: 1.25rem;
+  }
+
+  .form-grid-row {
+    grid-template-columns: 1fr;
+  }
+
+  .form-submit-row {
+    flex-direction: column-reverse;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .form-submit-row .btn {
+    width: 100%;
+  }
+
+  .footer-top-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .footer-bottom-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+
+  .footer-legal-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .modal-dialog {
+    max-height: 95vh;
+  }
+
+  .modal-header,
+  .modal-body,
+  .modal-footer {
+    padding: 1.25rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .site-header,
+  .top-bar,
+  .mobile-menu-toggle,
+  .mobile-drawer,
+  .back-to-top-btn,
+  .btn,
+  .enquiry-section,
+  .footer-bottom-bar {
+    display: none !important;
+  }
+
+  body {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+  }
+
+  .container, .container-wide {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
+  .product-card-row,
+  .workflow-card,
+  .stream-card {
+    border: 1px solid #CCCCCC !important;
+    break-inside: avoid;
+    box-shadow: none !important;
+  }
+}
