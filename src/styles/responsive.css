@@ -60,48 +60,40 @@
     display: flex;
   }
 
-  /* Cinematic Hero Mobile */
-  .hero-title-center {
-    font-size: 2rem;
+  /* Backdrop Hero Mobile */
+  .hero-backdrop-section {
+    min-height: auto;
+    padding-top: 3.5rem;
+    padding-bottom: 2.75rem;
   }
 
-  .cinematic-hero-img {
-    aspect-ratio: 16 / 9;
+  .hero-title-backdrop {
+    font-size: clamp(2rem, 6vw, 2.35rem);
   }
 
-  .cinematic-meta-overlay {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.35rem;
-    left: 0.85rem;
-    right: 0.85rem;
-    bottom: 0.65rem;
-  }
-
-  .cinematic-status-bar {
+  .hero-backdrop-status-bar {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .status-cell {
-    border-bottom: 1px solid var(--color-border);
+  .backdrop-status-cell {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   }
 
-  .status-cell:nth-child(2) {
+  .backdrop-status-cell:nth-child(2) {
     border-right: none;
   }
 
-  /* Compact Hero Rail */
-  .hero-rail-compact {
+  .hero-backdrop-pillars {
     grid-template-columns: 1fr;
   }
 
-  .hero-rail-item-compact {
+  .hero-pillar-item-backdrop {
     border-right: none;
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     padding: 1rem;
   }
 
-  .hero-rail-item-compact:last-child {
+  .hero-pillar-item-backdrop:last-child {
     border-bottom: none;
   }
 
