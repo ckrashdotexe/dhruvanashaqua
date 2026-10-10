@@ -5,60 +5,67 @@ export function renderCompanyOverview() {
   return `
     <section class="overview-section section-padding" id="overview" aria-labelledby="overview-title">
       <div class="container">
+        <!-- Centered Section Header -->
         <div class="section-header">
           <span class="section-tag">${overview.sectionTag}</span>
-          <h2 class="section-title" id="overview-title">${overview.title}</h2>
+          <h2 class="section-title" id="overview-title">An Industrial Standard for Modern Beverage Production.</h2>
           <p class="section-subtitle">
-            A manufacturing framework grounded in consistency, sanitary engineering, and transparent commercial governance.
+            Dhruvansh Aqua LLP is built on process repeatability, sanitary cleanroom standards, and uncompromising quality assurance across every batch.
           </p>
         </div>
 
-        <div class="overview-grid">
-          <!-- Left: Editorial Narrative -->
-          <div class="overview-editorial">
-            <div class="overview-paragraphs">
-              ${overview.editorialCopy.map(para => `<p>${para}</p>`).join('')}
-            </div>
+        <!-- 3 Core Foundational Pillars (Centered, Compact, Professional) -->
+        <div class="about-pillars-grid">
+          <div class="about-pillar-card">
+            <div class="pillar-idx">01 / SANITARY DISCIPLINE</div>
+            <h3 class="pillar-title">Cleanroom Engineering</h3>
+            <p class="pillar-desc">
+              All filling and container handling occurs under positive-pressure HEPA-filtered cleanroom air, with food-grade stainless steel (SS316L) contact metallurgy and automated CIP circuits.
+            </p>
+          </div>
 
-            <div class="overview-image-box">
-              <img 
-                src="${overview.image}" 
-                alt="${overview.imageAlt}" 
-                width="720" 
-                height="405" 
-                loading="lazy"
-              />
-              <div class="overview-image-caption">
-                <span>FIG. 02 — ${overview.caption}</span>
-              </div>
+          <div class="about-pillar-card">
+            <div class="pillar-idx">02 / PROCESS REPEATABILITY</div>
+            <h3 class="pillar-title">Consistent Batch Integrity</h3>
+            <p class="pillar-desc">
+              From raw water conditioning through automated rotary filling and calibrated magnetic capping, every operational phase is verified to eliminate batch-to-batch variation.
+            </p>
+          </div>
+
+          <div class="about-pillar-card">
+            <div class="pillar-idx">03 / COMMERCIAL RELIABILITY</div>
+            <h3 class="pillar-title">B2B Supply Governance</h3>
+            <p class="pillar-desc">
+              Formed as an Indian Limited Liability Partnership (LLP), our enterprise is structured to fulfill long-term supply agreements for regional distributors, modern retail, and corporate institutions.
+            </p>
+          </div>
+        </div>
+
+        <!-- Centered Architectural Facility Spotlight -->
+        <div class="about-facility-spotlight">
+          <div class="spotlight-image-frame">
+            <img 
+              src="${overview.image}" 
+              alt="${overview.imageAlt}" 
+              width="1120" 
+              height="450" 
+              loading="lazy"
+              class="spotlight-img"
+            />
+            <div class="spotlight-caption">
+              <span>FIG. 02 — ${overview.caption}</span>
+              <span class="tech-badge">HIGH-PRESSURE RO DESALINATION &bull; MULTI-BARRIER PURIFICATION</span>
             </div>
           </div>
 
-          <!-- Right: Verified Corporate & Operational Facts -->
-          <div class="overview-data-panel">
-            <div class="data-panel-header">
-              <span class="data-panel-title">Corporate Governance & Status</span>
-              <span class="tech-badge accent">VERIFIED RECORD</span>
-            </div>
-
-            <div class="governance-list">
-              ${overview.governanceDetails.map(item => `
-                <div class="governance-item">
-                  <span class="governance-label">${item.label}</span>
-                  <span class="governance-value">${item.value}</span>
-                </div>
-              `).join('')}
-            </div>
-
-            <div style="padding: 1.25rem; background: var(--color-surface-subtle); border-top: 1px solid var(--color-border);">
-              <p style="font-size: var(--text-xs); color: var(--color-ink-muted); margin-bottom: 0.75rem; font-family: var(--font-mono);">
-                NOTICE: Detailed manufacturing throughput capacities, batch schedules, and private-label agreements are reviewed under standard commercial inquiry.
-              </p>
-              <a href="#enquiry" class="btn btn-secondary btn-sm" style="width: 100%;">
-                <span>Request Commercial Discussion</span>
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </a>
-            </div>
+          <!-- Centered Governance Status Rail -->
+          <div class="about-governance-bar">
+            ${overview.governanceDetails.slice(0, 4).map(item => `
+              <div class="gov-cell">
+                <span class="gov-label">${item.label.toUpperCase()}</span>
+                <span class="gov-val">${item.value}</span>
+              </div>
+            `).join('')}
           </div>
         </div>
       </div>

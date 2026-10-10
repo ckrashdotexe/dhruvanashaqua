@@ -35,24 +35,24 @@
   --color-status-error: #A83232;      /* Technical red for validation errors */
   --color-status-error-bg: #FAEEEE;
 
-  /* Typography */
-  --font-heading: 'Manrope', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-mono: 'IBM Plex Mono', SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  /* Typography — Minimal, Sharp, Non-AI Aesthetic */
+  --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 
-  /* Typographic Scales */
-  --text-xs: 0.75rem;    /* 12px */
-  --text-sm: 0.84375rem; /* 13.5px */
-  --text-base: 0.96875rem; /* 15.5px */
-  --text-md: 1.0625rem;  /* 17px */
-  --text-lg: 1.25rem;    /* 20px */
-  --text-xl: 1.5rem;     /* 24px */
-  --text-2xl: 1.875rem;  /* 30px */
-  --text-3xl: 2.25rem;   /* 36px */
-  --text-4xl: 3rem;      /* 48px */
-  --text-5xl: 3.75rem;   /* 60px */
+  /* Typographic Scales (Crisp, disciplined, professional) */
+  --text-xs: 0.72rem;    /* ~11.5px */
+  --text-sm: 0.82rem;    /* ~13px */
+  --text-base: 0.925rem; /* ~14.8px */
+  --text-md: 1.02rem;    /* ~16.3px */
+  --text-lg: 1.15rem;    /* ~18.4px */
+  --text-xl: 1.35rem;    /* ~21.6px */
+  --text-2xl: 1.65rem;   /* ~26.4px */
+  --text-3xl: 2rem;      /* ~32px */
+  --text-4xl: 2.5rem;    /* ~40px */
+  --text-5xl: 3.15rem;   /* ~50.4px */
 
-  /* Spacing Scale */
+  /* Spacing Scale (Tighter, refined) */
   --space-1: 0.25rem;   /* 4px */
   --space-2: 0.5rem;    /* 8px */
   --space-3: 0.75rem;   /* 12px */
@@ -60,28 +60,28 @@
   --space-5: 1.25rem;   /* 20px */
   --space-6: 1.5rem;    /* 24px */
   --space-8: 2rem;      /* 32px */
-  --space-10: 2.5rem;   /* 40px */
-  --space-12: 3rem;     /* 48px */
-  --space-16: 4rem;     /* 64px */
-  --space-20: 5rem;     /* 80px */
-  --space-24: 6rem;     /* 96px */
-  --space-32: 8rem;     /* 128px */
+  --space-10: 2.25rem;  /* 36px */
+  --space-12: 2.75rem;  /* 44px */
+  --space-16: 3.5rem;   /* 56px */
+  --space-20: 4.5rem;   /* 72px */
+  --space-24: 5.5rem;   /* 88px */
+  --space-32: 7rem;     /* 112px */
 
-  /* Container & Layout */
-  --container-max: 1240px;
-  --container-wide: 1380px;
+  /* Container & Layout (Compact, focused) */
+  --container-max: 1120px;
+  --container-wide: 1240px;
   --container-pad: 1.5rem;
 
-  /* Architectural Radius (restrained, never bubbly) */
+  /* Architectural Radius (Clean, sharp) */
   --radius-xs: 2px;
-  --radius-sm: 3px;
-  --radius-md: 4px;
-  --radius-lg: 6px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
 
-  /* Shadows (subtle, editorial, architectural) */
-  --shadow-subtle: 0 1px 3px rgba(23, 43, 58, 0.05);
-  --shadow-panel: 0 4px 16px rgba(23, 43, 58, 0.06);
-  --shadow-modal: 0 16px 48px rgba(23, 43, 58, 0.16);
+  /* Shadows (Subtle, filmic) */
+  --shadow-subtle: 0 1px 3px rgba(23, 43, 58, 0.04);
+  --shadow-panel: 0 4px 20px rgba(23, 43, 58, 0.06);
+  --shadow-modal: 0 20px 60px rgba(23, 43, 58, 0.2);
 
   /* Transitions */
   --transition-fast: 150ms cubic-bezier(0.16, 1, 0.3, 1);
@@ -89,6 +89,6 @@
   --transition-smooth: 400ms cubic-bezier(0.16, 1, 0.3, 1);
 
   /* Header Height */
-  --header-height: 72px;
-  --topbar-height: 36px;
+  --header-height: 66px;
+  --topbar-height: 32px;
 }

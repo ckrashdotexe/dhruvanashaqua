@@ -152,7 +152,7 @@ function setupEventListeners() {
 
   // --- 3. Product Category Tabs Filter ---
   const filterButtons = document.querySelectorAll('.filter-tab-btn');
-  const productRows = document.querySelectorAll('.product-card-row');
+  const showcaseCards = document.querySelectorAll('.showcase-card, .product-card-row');
 
   filterButtons.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -165,12 +165,12 @@ function setupEventListeners() {
 
       const filterVal = btn.getAttribute('data-filter');
 
-      productRows.forEach(row => {
-        const cat = row.getAttribute('data-category');
+      showcaseCards.forEach(card => {
+        const cat = card.getAttribute('data-category');
         if (filterVal === 'all' || cat === filterVal) {
-          row.style.display = 'grid';
+          card.style.display = 'flex';
         } else {
-          row.style.display = 'none';
+          card.style.display = 'none';
         }
       });
     });
