@@ -1,11 +1,12 @@
 import './styles/variables.css';
 import './styles/base.css';
 import './styles/components.css';
+import './styles/hero-cinematic.css';
 import './styles/responsive.css';
 
 import { companyData } from './data/companyData.js';
 import { renderHeader } from './components/Header.js';
-import { renderHero } from './components/Hero.js';
+import { renderHero, initHeroScrollAnimation } from './components/Hero.js';
 import { renderCompanyOverview } from './components/CompanyOverview.js';
 import { renderProductPortfolio } from './components/ProductPortfolio.js';
 import { renderManufacturingCapabilities } from './components/ManufacturingCapabilities.js';
@@ -77,6 +78,7 @@ function initApp() {
 
   setupEventListeners();
   updateStoredCountBadge();
+  initHeroScrollAnimation();
 }
 
 // Setup all interactions, validation, modal controls, and scroll spy
@@ -93,12 +95,19 @@ function setupEventListeners() {
   window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
 
-    // Header styling on scroll
-    if (scrollY > 40) {
+    const heroSection = document.getElementById('hero');
+    const heroBottom = heroSection ? (heroSection.offsetTop + heroSection.offsetHeight - 140) : 40;
+
+    // Header styling on scroll (respects hero theme)
+    if (scrollY > heroBottom) {
       header?.classList.add('scrolled');
-      backToTopBtn?.classList.add('visible');
     } else {
       header?.classList.remove('scrolled');
+    }
+
+    if (scrollY > 300) {
+      backToTopBtn?.classList.add('visible');
+    } else {
       backToTopBtn?.classList.remove('visible');
     }
 
